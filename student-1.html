@@ -25,19 +25,21 @@
             <form id="donation-form">
                 <div>
                     <label for="charity-name">Charity Name:</label>
-                    <input type="text" id="charity-name" name="charity-name" placeholder="Enter the charity's name" required>
+                    <input type="text" id="charity-name" name="charity-name" placeholder="Enter the charity's name">
+                    <span id="charity-name-error" class="donation-error" style="display:none; color: red;">* Please enter Charity's name.</span>
                 </div>
                 <div>
                     <label for="donation-amount">Donation Amount:</label>
-                    <input type="number" id="donation-amount" name="donation-amount" placeholder="Enter the donation amount" required>
+                    <input type="number" id="donation-amount" name="donation-amount" placeholder="Enter the donation amount">
+                    <span id="donation-amount-error" class="donation-error" style="display:none; color: red;">* Please enter donation amount.</span>
                 </div>
                 <div>
                     <label for="donation-date">Date of Donation:</label>
-                    <input type="date" id="donation-date" name="donation-date" required>
-                </div>
+                    <input type="date" id="donation-date" name="donation-date">
+                    <span id="donation-date-error" class="donation-error" style="display:none; color: red;">* Please enter the date.</span>
                 <div>
                     <label for="donor-comment">Donor Comment/Message:</label>
-                    <textarea id="donor-comment" name="donor-comment" placeholder="Enter your comment or message"></textarea>
+                    <input type= text id="donor-comment" name="donor-comment" placeholder="Enter your comment or message"></textarea>
                 </div>
                 <button type="submit">Add Donation</button>
             </form>
@@ -47,5 +49,7 @@
     <footer>
         <p>&copy; 2024 Page Layouts. All rights reserved.</p>
     </footer>
+
+    <script src="donationForm.js"></script>
 </body>
 </html>
