@@ -55,3 +55,11 @@ function formHasErrors() {
 
     return errorFlag; // Return true if there are errors, false if no errors
 }
+
+// Export functions for Jest testing
+module.exports = {
+    validate,
+    hideErrors,
+    showError,
+    formHasErrors,
+};
