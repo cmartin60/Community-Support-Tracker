@@ -9,7 +9,7 @@ body {
 
 header, footer {
     text-align: center;
-    background-color: #007BFF;
+    background-color: #588ec8;
     color: #fff;
     padding: 10px 0;
 }
@@ -67,12 +67,12 @@ form input, form textarea, form button {
 }
 
 form button {
-    background-color: #007BFF;
+    background-color: #588ec8;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #588ec8;
 }
