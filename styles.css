@@ -76,3 +76,10 @@ form button {
 form button:hover {
     background-color: #588ec8;
 }
+
+.survey-error {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

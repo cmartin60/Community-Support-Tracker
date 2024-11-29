@@ -1,0 +1,15 @@
+{
+  "name": "community-support-tracker",
+  "version": "1.0.0",
+  "description": "The Donation Tracker is a part of the Community Support Tracker Project. It allows users to record and manage their charitable donations effectively. This project is designed using HTML and CSS to provide a clean, user-friendly interface for tracking donations.",
+  "main": "donationForm.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
