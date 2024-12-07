@@ -21,11 +21,30 @@
       <label for="volunteerDate">Date of Volunteering:</label>
       <input type="date" id="volunteerDate" name="volunteerDate" required>
 
-      <label for="experienceRating">Experience Rating (1-5):</label>
+      <label for="experienceRating">Experience Rating (1–5):</label>
       <input type="number" id="experienceRating" name="experienceRating" min="1" max="5" required>
 
-      <button type="submit">Submit Volunteer Hours</button>
+      <button type="submit">Log Volunteer Hours</button>
     </form>
+
+    <section>
+      <h2>Logged Volunteer Hours</h2>
+      <table id="volunteerTable">
+        <thead>
+          <tr>
+            <th>Charity Name</th>
+            <th>Hours Volunteered</th>
+            <th>Date</th>
+            <th>Experience Rating</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be dynamically generated -->
+        </tbody>
+      </table>
+      <p id="totalHours">Total Hours Volunteered: 0</p>
+    </section>
   </main>
   <footer>
     <p>&copy; 2024 PiXELL River Financial</p>
@@ -33,4 +52,5 @@
   <script src="volunteer-hours.js"></script>
 </body>
 </html>
+
 

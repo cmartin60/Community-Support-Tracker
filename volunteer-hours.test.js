@@ -73,3 +73,41 @@ describe('Volunteer Hours Tracker Tests', () => {
     consoleMock.mockRestore();
   });
 });
+
+require('./volunteer-hours');
+
+describe('Volunteer Hours Tracker Tests', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  test('should store data in localStorage', () => {
+    const mockData = [{ charityName: 'Charity A', hoursVolunteered: 5 }];
+    saveVolunteerData(mockData);
+    expect(loadVolunteerData()).toEqual(mockData);
+  });
+
+  test('should load data from localStorage', () => {
+    const mockData = [{ charityName: 'Charity B', hoursVolunteered: 10 }];
+    localStorage.setItem('volunteerData', JSON.stringify(mockData));
+    expect(loadVolunteerData()).toEqual(mockData);
+  });
+
+  test('should calculate total hours correctly', () => {
+    const mockData = [
+      { hoursVolunteered: 5 },
+      { hoursVolunteered: 10 },
+    ];
+    expect(calculateTotalHours(mockData)).toBe(15);
+  });
+
+  test('should delete an entry from localStorage', () => {
+    const mockData = [
+      { charityName: 'Charity A', hoursVolunteered: 5 },
+      { charityName: 'Charity B', hoursVolunteered: 10 },
+    ];
+    saveVolunteerData(mockData);
+    deleteVolunteerLog(0);
+    expect(loadVolunteerData()).toEqual([{ charityName: 'Charity B', hoursVolunteered: 10 }]);
+  });
+});
